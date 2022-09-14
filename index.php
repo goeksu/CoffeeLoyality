@@ -8,7 +8,7 @@
       $myusername = mysqli_real_escape_string($db,$_POST['kullaniciadi']);
       $mypassword = mysqli_real_escape_string($db,$_POST['sifre']); 
       $mypassword = md5($mypassword);
-      $girissql = "SELECT * FROM heroku_aa9d4e48d310743.yoneticiler WHERE kullaniciadi = '$myusername' and sifre = '$mypassword'";
+      
       $sonuc = mysqli_query($db,$girissql);
       $sonucrow = mysqli_fetch_array($sonuc,MYSQLI_ASSOC);
       
